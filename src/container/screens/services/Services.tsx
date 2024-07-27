@@ -19,9 +19,8 @@ const variants = {
   },
 };
 
-function ServicesComp() {
+function ServicesScreen() {
   const ref: any = useRef();
-
   const isInView = useInView(ref, { margin: "-100px" });
 
   return (
@@ -41,7 +40,6 @@ function ServicesComp() {
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
         <div className="title">
-          <img src="/public/people.webp" alt="people" />
           <h1>
             <motion.b whileHover={{ color: "orange" }}>Unique </motion.b> Ideas
           </h1>
@@ -51,7 +49,7 @@ function ServicesComp() {
             <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>{" "}
             Business.
           </h1>
-          <button>What we do?</button>
+          <button>What I Do?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
@@ -59,57 +57,64 @@ function ServicesComp() {
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Repudiandae veritatis dolores numquam adipisci commodi aspernatur,
-            expedita hic. Iste, quae quasi dignissimos aliquid autem quos
-            voluptatibus cumque aut adipisci eveniet deserunt.
-          </p>
-          <button>Go</button>
+          <h2>Custom Web Application Development</h2>
+          <ul>
+            <li>
+              Develop responsive and dynamic web applications using React.js.
+            </li>
+            <li>
+              Build user-friendly interfaces with modern design principles.
+            </li>
+            <li>Optimize applications for maximum speed and scalability.</li>
+          </ul>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Repudiandae veritatis dolores numquam adipisci commodi aspernatur,
-            expedita hic. Iste, quae quasi dignissimos aliquid autem quos
-            voluptatibus cumque aut adipisci eveniet deserunt.
-          </p>
-          <button>Go</button>
+          <h2>Mobile Application Development</h2>
+          <ul>
+            <li>
+              Create high-performance mobile applications using React Native.
+            </li>
+            <li>Ensure cross-platform compatibility (iOS and Android).</li>
+            <li>
+              Integrate native device features for enhanced user experience.
+            </li>
+          </ul>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Repudiandae veritatis dolores numquam adipisci commodi aspernatur,
-            expedita hic. Iste, quae quasi dignissimos aliquid autem quos
-            voluptatibus cumque aut adipisci eveniet deserunt.
-          </p>
-          <button>Go</button>
+          <h2>UI/UX Design and Implementation</h2>
+          <ul>
+            <li>
+              Design intuitive user interfaces with a focus on user experience.
+            </li>
+            <li>Implement Material UI and other design frameworks.</li>
+            <li>Conduct usability testing and incorporate user feedback.</li>
+          </ul>
         </motion.div>
         <motion.div
           className="box"
           whileHover={{ backgroundColor: "lightgray", color: "black" }}
         >
-          <h2>Branding</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Repudiandae veritatis dolores numquam adipisci commodi aspernatur,
-            expedita hic. Iste, quae quasi dignissimos aliquid autem quos
-            voluptatibus cumque aut adipisci eveniet deserunt.
-          </p>
-          <button>Go</button>
+          <h2>Component-Based Development</h2>
+          <ul>
+            <li>
+              Develop reusable and modular components for efficient development.
+            </li>
+            <li>Maintain code quality and consistency across projects.</li>
+            <li>
+              Utilize state management libraries like Redux for complex
+              applications.
+            </li>
+          </ul>
         </motion.div>
       </motion.div>
     </motion.div>
   );
 }
 
-export default ServicesComp;
+export default ServicesScreen;

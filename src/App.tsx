@@ -1,11 +1,11 @@
 import "./app.scss";
 import ContactComp from "./container/screens/contact/Contact";
-import CursorComp from "./container/screens/cursor/Cursor";
+import CursorComp from "./components/cursor/Cursor";
 import HomeScreen from "./container/screens/Home/HomeScreen";
 import NavBarScreen from "./container/screens/navbar/navbar";
-import ParallaxComp from "./container/screens/Parallax/Parallax";
 import PortfolioComp from "./container/screens/Portfolio/Portfolio";
-import ServicesComp from "./container/screens/services/Services";
+import ParallaxScreen from "./container/screens/Parallax/Parallax";
+import ServicesScreen from "./container/screens/services/Services";
 
 function App() {
   return (
@@ -17,11 +17,13 @@ function App() {
           <HomeScreen />
         </section>
         <section id="Services">
-          {/* <ParallaxComp type="services" /> */}
+          <ParallaxScreen type="services" />
         </section>
-        <section>{/* <ServicesComp /> */}</section>
+        <section>
+          <ServicesScreen />
+        </section>
         <section id="Portfolio">
-          {/* <ParallaxComp type="portfolio" /> */}
+          <ParallaxScreen type="portfolio" />
         </section>
         {/* <PortfolioComp /> */}
         <section id="Contact">{/* <ContactComp /> */}</section>

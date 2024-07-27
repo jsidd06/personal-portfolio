@@ -1,8 +1,8 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import "./Parallax.scss";
 import { motion, useTransform, useScroll } from "framer-motion";
 
-function ParallaxComp({ type }: any) {
+function ParallaxScreen({ type }: any) {
   const ref: any = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -25,7 +25,7 @@ function ParallaxComp({ type }: any) {
       }}
     >
       <motion.h1 style={{ y: yText }}>
-        {type === "services" ? "What We Do?" : "What We Did?"}
+        {type === "services" ? "What I Do?" : "What I Did?"}
       </motion.h1>
       <motion.div className="mountains"></motion.div>
       <motion.div
@@ -42,4 +42,4 @@ function ParallaxComp({ type }: any) {
   );
 }
 
-export default ParallaxComp;
+export default ParallaxScreen;

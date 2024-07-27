@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@import "../../../app.scss";
 
 .services {
   background: linear-gradient(180deg, #0c0c1d, #111132);
@@ -130,6 +130,19 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      h2 {
+        @include mobile {
+          text-align: center;
+          font-size: 26px;
+        }
+      }
+
+      ul {
+        @include mobile {
+          display: none;
+        }
+      }
 
       @include mobile {
         border: none;
