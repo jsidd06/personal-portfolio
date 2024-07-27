@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./app.scss";
+import ContactComp from "./container/screens/contact/Contact";
+import CursorComp from "./container/screens/cursor/Cursor";
+import HomeComp from "./container/screens/Home/HomeComp";
+import NavBarScreen from "./container/screens/navbar/navbar";
+import ParallaxComp from "./container/screens/Parallax/Parallax";
+import PortfolioComp from "./container/screens/Portfolio/Portfolio";
+import ServicesComp from "./container/screens/services/Services";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <CursorComp />
+        <section id="HomePage">
+          <NavBarScreen />
+          {/* <HomeComp /> */}
+        </section>
+        <section id="Services">
+          {/* <ParallaxComp type="services" /> */}
+        </section>
+        <section>{/* <ServicesComp /> */}</section>
+        <section id="Portfolio">
+          {/* <ParallaxComp type="portfolio" /> */}
+        </section>
+        {/* <PortfolioComp /> */}
+        <section id="Contact">{/* <ContactComp /> */}</section>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
