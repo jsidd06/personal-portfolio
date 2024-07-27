@@ -1,6 +1,5 @@
-import React from "react";
-import Image from "../../assets/about.png";
-import "./HomeComp.scss";
+import Image from "../../../assets/about.png";
+import "./HomeScreen.scss";
 import { motion } from "framer-motion";
 
 const textVariants = {
@@ -40,7 +39,7 @@ const sliderVariants: any = {
   },
 };
 
-function HomeComp() {
+function HomeScreen() {
   return (
     <div className="homePage">
       <div className="wrapper">
@@ -50,16 +49,16 @@ function HomeComp() {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Siddharh Jain</motion.h2>
+          <motion.h2 variants={textVariants}>Siddharth Jain</motion.h2>
           <motion.h1 variants={textVariants}>
-            Web developer and App developer
+            passionate frontend developer
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
+          {/* <motion.div variants={textVariants} className="buttons">
             <motion.button variants={textVariants}>
               See the latest works
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
-          </motion.div>
+          </motion.div> */}
           <motion.img
             variants={textVariants}
             animate="scrollButtons"
@@ -83,4 +82,4 @@ function HomeComp() {
   );
 }
 
-export default HomeComp;
+export default HomeScreen;

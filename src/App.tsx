@@ -1,7 +1,7 @@
 import "./app.scss";
 import ContactComp from "./container/screens/contact/Contact";
 import CursorComp from "./container/screens/cursor/Cursor";
-import HomeComp from "./container/screens/Home/HomeComp";
+import HomeScreen from "./container/screens/Home/HomeScreen";
 import NavBarScreen from "./container/screens/navbar/navbar";
 import ParallaxComp from "./container/screens/Parallax/Parallax";
 import PortfolioComp from "./container/screens/Portfolio/Portfolio";
@@ -14,7 +14,7 @@ function App() {
         <CursorComp />
         <section id="HomePage">
           <NavBarScreen />
-          {/* <HomeComp /> */}
+          <HomeScreen />
         </section>
         <section id="Services">
           {/* <ParallaxComp type="services" /> */}
