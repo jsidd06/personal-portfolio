@@ -32,7 +32,7 @@ const Single = ({ item }: any) => {
   );
 };
 
-function PortfolioComp() {
+function PortfolioScreen() {
   const ref: any = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -58,4 +58,4 @@ function PortfolioComp() {
   );
 }
 
-export default PortfolioComp;
+export default PortfolioScreen;

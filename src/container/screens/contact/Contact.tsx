@@ -2,6 +2,7 @@ import "./Contact.scss";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const variants = {
   initial: {
@@ -18,8 +19,10 @@ const variants = {
   },
 };
 
-const ContactComp = () => {
+const ContactScreen = () => {
   const form: any = useRef();
+  const notify = () =>
+    toast("Submit Successfully we will meet shortly!", { type: "success" });
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
@@ -33,6 +36,7 @@ const ContactComp = () => {
       .then(
         (result) => {
           console.log("SUCCESS!", result);
+          notify();
           setSuccess(true);
         },
         (error) => {
@@ -53,7 +57,7 @@ const ContactComp = () => {
         <motion.h1 variants={variants}>Let's work together</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2>Mail</h2>
-          <span>hello@example.com</span>
+          <span>jsidd06@gmail.com</span>
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
@@ -119,6 +123,7 @@ const ContactComp = () => {
           <textarea rows={8} placeholder="Message" name="message" />
           <button>Submit</button>
         </motion.form>
+        <ToastContainer />
         {success && "Success"}
         {error && "Error"}
       </div>
@@ -126,4 +131,4 @@ const ContactComp = () => {
   );
 };
 
-export default ContactComp;
+export default ContactScreen;
