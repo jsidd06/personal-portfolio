@@ -25,7 +25,7 @@ function App() {
         <section id="Portfolio">
           <ParallaxScreen type="portfolio" />
         </section>
-        {/* <PortfolioComp /> */}
+        <PortfolioComp />
         <section id="Contact">{/* <ContactComp /> */}</section>
       </div>
     </>

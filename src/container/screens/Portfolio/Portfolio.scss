@@ -1,4 +1,4 @@
-@import "../../app.scss";
+@import "../../../app.scss";
 
 .portfolio {
   position: relative;
@@ -97,13 +97,15 @@
           }
         }
 
-        button {
+        a {
           background-color: orange;
           border: none;
           border-radius: 10px;
           width: 200px;
           padding: 10px;
           cursor: pointer;
+          text-align: center;
+          color: #000;
         }
       }
     }
